@@ -4,7 +4,9 @@ function swap(array, i, j) {
   const tmp = array[i];
   array[i] = array[j];
   array[j] = tmp;
+  //   return array;
 }
+// console.log(swap([2, 8, 7, 4], 0,1));
 
 function bubbleSort2(array) {
   let swaps = 0;
@@ -72,7 +74,7 @@ function partition(array, start, end) {
   const pivot = array[end - 1];
   let j = start;
   for (let i = start; i < end - 1; i++) {
-    if (array[i] <= pivot) {
+    if (array[i] <= pivot) { // [89, 6, 72]
       swap(array, i, j);
       j++;
     }
@@ -81,4 +83,6 @@ function partition(array, start, end) {
   return j;
 }
 
-console.log(bubbleSort2([88, 33, 99, 22, 54]));
+console.log(partition([1,5,0,4, 5], 0, 5));
+// console.log(quickSort([5, 4, 7, 8, 2], 0, 5));
+// console.log(bubbleSort2([88, 33, 99, 22, 54]));
